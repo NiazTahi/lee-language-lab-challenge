@@ -1,0 +1,121 @@
+{
+  "config": {
+    "model_name": "distilbert-base-multilingual-cased",
+    "language_treebank": "UD_English-EWT",
+    "max_train_samples": 3000,
+    "max_eval_samples": 1000,
+    "max_length": 128,
+    "batch_size": 16,
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "freeze_embeddings": true,
+    "freeze_encoder_layers": 3,
+    "seed": 42
+  },
+  "device": "cuda",
+  "cuda_device": "NVIDIA GeForce RTX 3060",
+  "dataset_sizes": {
+    "train": 3000,
+    "validation": 1000,
+    "test": 1000
+  },
+  "labels": {
+    "ADJ": 0,
+    "ADP": 1,
+    "ADV": 2,
+    "AUX": 3,
+    "CCONJ": 4,
+    "DET": 5,
+    "INTJ": 6,
+    "NOUN": 7,
+    "NUM": 8,
+    "PART": 9,
+    "PRON": 10,
+    "PROPN": 11,
+    "PUNCT": 12,
+    "SCONJ": 13,
+    "SYM": 14,
+    "VERB": 15,
+    "X": 16
+  },
+  "ud_source": "https://raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master",
+  "results": [
+    {
+      "run_name": "baseline_full_finetune",
+      "frozen_modules": [],
+      "parameters": {
+        "total": 134747153,
+        "trainable": 134747153,
+        "frozen": 0
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.6994502686281153,
+          "validation_loss": 0.19826717485511114,
+          "validation_accuracy": 0.9472411831626849
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.08528957936040898,
+          "validation_loss": 0.174945331400349,
+          "validation_accuracy": 0.955844709897611
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.045298528748544606,
+          "validation_loss": 0.1771387103649359,
+          "validation_accuracy": 0.9574089874857793
+        }
+      ],
+      "test_metrics": {
+        "loss": 0.16602089687708824,
+        "accuracy": 0.9578546976036516,
+        "tokens": 13145
+      },
+      "runtime_seconds": 82.02958400000352
+    },
+    {
+      "run_name": "partial_freeze_embeddings_first_3_layers",
+      "frozen_modules": [
+        "distilbert.embeddings",
+        "distilbert.transformer.layer.0",
+        "distilbert.transformer.layer.1",
+        "distilbert.transformer.layer.2"
+      ],
+      "parameters": {
+        "total": 134747153,
+        "trainable": 21276689,
+        "frozen": 113470464
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.8155370892837961,
+          "validation_loss": 0.21219290272584038,
+          "validation_accuracy": 0.9409840728100114
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.12942431143861502,
+          "validation_loss": 0.18658724084259973,
+          "validation_accuracy": 0.9495164960182025
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.09311692129345016,
+          "validation_loss": 0.17757653669705467,
+          "validation_accuracy": 0.9526450511945392
+        }
+      ],
+      "test_metrics": {
+        "loss": 0.1804140846111945,
+        "accuracy": 0.9491821985545835,
+        "tokens": 13145
+      },
+      "runtime_seconds": 46.174075999995694
+    }
+  ]
+}

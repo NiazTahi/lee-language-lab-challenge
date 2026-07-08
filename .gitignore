@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Downloaded/generated data and heavyweight training outputs
+data/
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Local/temporary files
+.env
+.DS_Store
+Thumbs.db
+
