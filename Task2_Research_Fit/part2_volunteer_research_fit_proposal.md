@@ -119,20 +119,6 @@ Inspired by low-resource language learning applications, explore a Bangla module
 
 This lab is a strong fit because the work is not only about model performance; it is about language inclusion, multilingual evaluation, and low-resource adaptation. Prof. Lee's group has recent work on typological language representations, proxy performance prediction, multilingual NLP education, and low-resource language tools. A Bangla-centered project would align with those themes while adding a concrete South Asian language direction.
 
-## Initial Timeline for Volunteering
-
-**Weeks 1-2:**  
-Read 6-8 core papers, reproduce the Part 1 experiment, and finalize the Bangla benchmark/task selection.
-
-**Weeks 3-4:**  
-Run baseline models on one classification task and one sequence-labeling task.
-
-**Weeks 5-6:**  
-Run efficient adaptation experiments: freezing, LoRA/adapters if feasible, and low-data curves.
-
-**Weeks 7-8:**  
-Perform error analysis and write a short internal report with tables, limitations, and next-step recommendations.
-
 ## Selected References
 
 1. Annie En-Shiun Lee. Official Ontario Tech profile. Research topics include multilinguality, language diversity, low-resource languages, multicultural bias, and efficient model adaptation. https://science.ontariotechu.ca/computer-science/people/undergraduate-faculty/annie-lee.php
