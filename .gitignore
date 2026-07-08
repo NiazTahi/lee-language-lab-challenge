@@ -15,4 +15,10 @@ outputs/
 .env
 .DS_Store
 Thumbs.db
+2026 Graduate Candidate - Challenge Question.docx
 
+# Root-level scratch copies; task folders contain the submission artifacts
+/reports/
+/scripts/
+/notebooks_part1_pos_freezing.md
+/part1_pos_freezing_experiment.ipynb
