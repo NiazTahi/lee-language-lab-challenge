@@ -14,7 +14,7 @@ This repository contains my completed materials for the Lee Language Lab challen
   - Focus: multilingual and low-resource NLP with Bangla as a concrete direction.
 
 - `Task3_Paper_Review/`
-  - Scientific peer review, slides, and speaking script.
+  - Scientific peer review and presentation slides.
   - Paper: *MDPO: Conditional Preference Optimization for Multimodal Large Language Models*.
 
 ## Task 1 Result Summary
